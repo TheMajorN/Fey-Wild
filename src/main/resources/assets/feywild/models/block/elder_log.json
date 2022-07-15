@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cube_column",
+	"textures": {
+	"end": "feywild:blocks/elder_log_top",
+	"side": "feywild:blocks/elder_log"
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cube_column",
+	"textures": {
+	"end": "feywild:blocks/stripped_rowan_log",
+	"side": "feywild:blocks/stripped_rowan_log"
+	}
+}

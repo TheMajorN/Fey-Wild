@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model":  "feywild:block/book_stack"},
+    "facing=south": { "model":  "feywild:block/book_stack", "y":  180},
+    "facing=east": { "model":  "feywild:block/book_stack", "y":  270},
+    "facing=west": { "model":  "feywild:block/book_stack", "y":  90}
+  }
+}

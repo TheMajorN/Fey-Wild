@@ -1,0 +1,28 @@
+{
+  "block.feywild.book_stack": "Stack of Books",
+  "block.feywild.book_stack_short": "Half Stack of Books",
+  "block.feywild.spruce_bookshelf_1": "Spruce Bookshelf 1",
+  "block.feywild.spruce_bookshelf_2": "Spruce Bookshelf 2",
+  "block.feywild.spruce_bookshelf_3": "Spruce Bookshelf 3",
+  "block.feywild.candle": "Candle",
+
+  "block.feywild.elder_log": "Elder Log",
+  "block.feywild.elder_wood": "Elder Wood",
+  "block.feywild.stripped_elder_log": "Stripped Elder Log",
+  "block.feywild.stripped_elder_wood": "Stripped Elder Wood",
+  "block.feywild.elder_sapling": "Elder Sapling",
+  "block.feywild.elder_leaves": "Elder Leaves",
+  "block.feywild.elder_planks": "Elder Planks",
+  "block.feywild.rowan_log": "Rowan Log",
+  "block.feywild.rowan_wood": "Rowan Wood",
+  "block.feywild.stripped_rowan_log": "Stripped Rowan Log",
+  "block.feywild.stripped_rowan_wood": "Stripped Rowan Wood",
+  "block.feywild.rowan_sapling": "Rowan Sapling",
+  "block.feywild.rowan_leaves": "Rowan Leaves",
+  "block.feywild.rowan_planks": "Rowan Planks",
+
+
+  "item.feywild.onyx": "Onyx",
+  "item.feywild.opal": "Opal",
+  "item.feywild.sapphire": "Sapphire"
+}

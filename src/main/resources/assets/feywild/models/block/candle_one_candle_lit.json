@@ -1,0 +1,7 @@
+{
+  "parent": "feywild:block/template_candle",
+  "textures": {
+    "all": "feywild:blocks/candle_lit",
+    "particle": "feywild:blocks/candle_lit"
+  }
+}
