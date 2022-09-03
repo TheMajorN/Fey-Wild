@@ -76,6 +76,7 @@ public class BlockInit {
 
     public static final RegistryObject<Block> ROWAN_PLANKS = BLOCKS.register("rowan_planks",
             () -> new Block(AbstractBlock.Properties.copy(Blocks.OAK_PLANKS)));
+
     public static final RegistryObject<Block> ROWAN_LEAVES = BLOCKS.register("rowan_leaves",
             () -> new LeavesBlock(AbstractBlock.Properties.of(Material.LEAVES).strength(0.2f)
                     .randomTicks().sound(SoundType.GRASS).noOcclusion()));

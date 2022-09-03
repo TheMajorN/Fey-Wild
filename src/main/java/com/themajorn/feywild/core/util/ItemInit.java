@@ -26,6 +26,9 @@ public class ItemInit {
     public static final RegistryObject<Item> GARNET = ITEMS.register("garnet",
             () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MISC)));
 
+    public static final RegistryObject<Item> AQUAMARINE = ITEMS.register("aquamarine",
+            () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MISC)));
+
     // === BLOCK ITEMS === //
     public static final RegistryObject<Item> BOOK_STACK_ITEM = ITEMS.register("book_stack",
             () -> new BlockItemBase(BlockInit.BOOK_STACK.get()));

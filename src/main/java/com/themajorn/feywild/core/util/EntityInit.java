@@ -3,6 +3,8 @@ package com.themajorn.feywild.core.util;
 import com.themajorn.feywild.FeyWild;
 import com.themajorn.feywild.common.entities.AlmirajEntity;
 import com.themajorn.feywild.common.entities.BlinkDogEntity;
+import com.themajorn.feywild.common.entities.DryadEntity;
+import com.themajorn.feywild.common.entities.PiranhaEntity;
 import com.themajorn.feywild.common.entities.brigganock.BrigganockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -30,6 +32,16 @@ public class EntityInit {
             () -> EntityType.Builder.of(BrigganockEntity::new, EntityClassification.MONSTER)
                     .sized(1.2F, 1.0F)
                     .build(new ResourceLocation(FeyWild.MOD_ID, "brigganock").toString()));
+
+    public static final RegistryObject<EntityType<DryadEntity>> DRYAD = ENTITIES.register("dryad",
+            () -> EntityType.Builder.of(DryadEntity::new, EntityClassification.MONSTER)
+                    .sized(4.1F, 1.5F)
+                    .build(new ResourceLocation(FeyWild.MOD_ID, "dryad").toString()));
+
+    public static final RegistryObject<EntityType<PiranhaEntity>> PIRANHA = ENTITIES.register("piranha",
+            () -> EntityType.Builder.of(PiranhaEntity::new, EntityClassification.MONSTER)
+                    .sized(1.2F, 1.0F)
+                    .build(new ResourceLocation(FeyWild.MOD_ID, "piranha").toString()));
 
 
 }

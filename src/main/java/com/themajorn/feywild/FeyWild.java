@@ -1,8 +1,6 @@
 package com.themajorn.feywild;
 
-import com.themajorn.feywild.client.entity.renderers.AlmirajRenderer;
-import com.themajorn.feywild.client.entity.renderers.BlinkDogRenderer;
-import com.themajorn.feywild.client.entity.renderers.BrigganockRenderer;
+import com.themajorn.feywild.client.entity.renderers.*;
 import com.themajorn.feywild.core.biomes.BiomeGeneration;
 import com.themajorn.feywild.core.util.*;
 import net.minecraft.block.Block;
@@ -64,6 +62,8 @@ public class FeyWild {
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.ALMIRAJ.get(), AlmirajRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.BLINK_DOG.get(), BlinkDogRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.BRIGGANOCK.get(), BrigganockRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityInit.PIRANHA.get(), PiranhaRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityInit.DRYAD.get(), DryadRenderer::new);
 
         RenderTypeLookup.setRenderLayer(BlockInit.BOOK_STACK.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(BlockInit.BOOK_STACK_SHORT.get(), RenderType.cutout());
@@ -83,13 +83,17 @@ they bear small, red or white berry-like fruits
 (that aren’t technically berries) with five-petalled flowers.
 
 Brigganock village
+
+Eladrin Ruins
+
+Eladrin Village
  */
 
 
 /*
 JAC WRITES HERE!!!
 I love you!! >3
-Maybe we can make the book pages a little less shockingly white?
+
 
 
 
