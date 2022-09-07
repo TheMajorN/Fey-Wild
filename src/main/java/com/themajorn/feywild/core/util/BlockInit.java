@@ -39,6 +39,19 @@ public class BlockInit {
     public static final RegistryObject<Block> SPRUCE_BOOKSHELF_3 = BLOCKS.register("spruce_bookshelf_3",
             () -> new Block(AbstractBlock.Properties.copy(Blocks.BOOKSHELF)));
 
+    // === PLANTS / FUNGUS === //
+    public static final RegistryObject<Block> RED_AMANITA_MUSHROOM = BLOCKS.register("red_amanita_mushroom",
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.RED_MUSHROOM)));
+
+    public static final RegistryObject<Block> FLAME_LILLY = BLOCKS.register("flame_lilly",
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.LILY_OF_THE_VALLEY)));
+
+    public static final RegistryObject<Block> EVERFROST_BUSH = BLOCKS.register("everfrost_bush",
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+
+    public static final RegistryObject<Block> CATS_TONGUE = BLOCKS.register("cats_tongue",
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.PEONY)));
+
 
     // === TREES === //
     public static final RegistryObject<Block> ELDER_LOG = BLOCKS.register("elder_log",

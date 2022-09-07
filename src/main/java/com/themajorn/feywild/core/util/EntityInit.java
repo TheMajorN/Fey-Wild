@@ -35,7 +35,7 @@ public class EntityInit {
 
     public static final RegistryObject<EntityType<DryadEntity>> DRYAD = ENTITIES.register("dryad",
             () -> EntityType.Builder.of(DryadEntity::new, EntityClassification.MONSTER)
-                    .sized(4.1F, 1.5F)
+                    .sized(1.0F, 2.1F)
                     .build(new ResourceLocation(FeyWild.MOD_ID, "dryad").toString()));
 
     public static final RegistryObject<EntityType<PiranhaEntity>> PIRANHA = ENTITIES.register("piranha",

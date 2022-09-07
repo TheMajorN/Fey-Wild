@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
 public class FeyWild {
 
     public static final String MOD_ID = "feywild";
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public FeyWild() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
@@ -82,19 +82,42 @@ These trees can grow up to 40 feet tall. And,
 they bear small, red or white berry-like fruits
 (that aren’t technically berries) with five-petalled flowers.
 
+//===============STRUCTURES==================//
+STRUCTURES:
 Brigganock village
-
 Eladrin Ruins
-
+Temple Ruins
+Fey Temple
 Eladrin Village
- */
+Fey Garden
+Shrine
+Bridge
+Fey Farm
 
+//===============PLANTS==================//
+Healing Plants/Salves
+Mortar & Pestle
 
-/*
+HERBAL INGREDIENTS:
+Potion of Healing:
+Red Amanita Mushroom
+
+Muroosa Balm (Fire Resistance):
+Flame Lilly
+Muroosa twigs
+
+Antitoxin:
+Everfrost Berry
+Cat’s Tongue
+
+Willowshade Oil (Slow / Freeze Resistance):
+Willowshade Fruit
+
+Tea of Refreshment (Remove exhaustion):
+Morning Dew
+Cat's Tongue
+
 JAC WRITES HERE!!!
 I love you!! >3
-
-
-
 
  */

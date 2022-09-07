@@ -2,6 +2,8 @@ package com.themajorn.feywild.core.util;
 
 import com.themajorn.feywild.FeyWild;
 import com.themajorn.feywild.common.blocks.BlockItemBase;
+import com.themajorn.feywild.common.items.Antitoxin;
+import com.themajorn.feywild.common.items.MuroosaBalm;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.world.biome.Biome;
@@ -12,6 +14,19 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ItemInit {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FeyWild.MOD_ID);
+
+    // === SALVES / BALMS / POTIONS === //
+    public static final RegistryObject<Item> VIAL = ITEMS.register("vial",
+            () -> new Item(new Item.Properties().tab(ItemGroup.TAB_BREWING)));
+
+    public static final RegistryObject<Item> MUROOSA_BALM = ITEMS.register("muroosa_balm",
+            () -> new MuroosaBalm(new Item.Properties().tab(ItemGroup.TAB_BREWING)));
+
+    public static final RegistryObject<Item> ANTITOXIN = ITEMS.register("antitoxin",
+            () -> new Antitoxin(new Item.Properties().tab(ItemGroup.TAB_BREWING)));
+
+    public static final RegistryObject<Item> MINOR_HEALING_POTION = ITEMS.register("minor_healing_potion",
+            () -> new Item(new Item.Properties().tab(ItemGroup.TAB_BREWING)));
 
     // === GEMS === //
     public static final RegistryObject<Item> ONYX = ITEMS.register("onyx",
