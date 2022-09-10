@@ -3,29 +3,18 @@ package com.themajorn.feywild;
 import com.themajorn.feywild.client.entity.renderers.*;
 import com.themajorn.feywild.core.biomes.BiomeGeneration;
 import com.themajorn.feywild.core.util.*;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
-
-import java.util.stream.Collectors;
 
 @Mod(FeyWild.MOD_ID)
 public class FeyWild {
@@ -62,11 +51,13 @@ public class FeyWild {
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.ALMIRAJ.get(), AlmirajRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.BLINK_DOG.get(), BlinkDogRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.BRIGGANOCK.get(), BrigganockRenderer::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityInit.PIRANHA.get(), PiranhaRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityInit.QUIPPER.get(), QuipperRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.DRYAD.get(), DryadRenderer::new);
 
         RenderTypeLookup.setRenderLayer(BlockInit.BOOK_STACK.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(BlockInit.BOOK_STACK_SHORT.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.FLAME_LILLY.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.RED_AMANITA_MUSHROOM.get(), RenderType.cutout());
     }
 }
 
@@ -116,6 +107,13 @@ Willowshade Fruit
 Tea of Refreshment (Remove exhaustion):
 Morning Dew
 Cat's Tongue
+
+Potion of Animal Friendship:
+Cat's Tongue
+Quipper Scale
+
+Pepper Peppers:
+Fire peas
 
 JAC WRITES HERE!!!
 I love you!! >3

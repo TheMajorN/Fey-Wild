@@ -33,6 +33,11 @@ public class TreeGeneration {
                     .decorated(Features.Placements.HEIGHTMAP)
                     .decorated(Placement.COUNT_EXTRA.configured(
                             new AtSurfaceWithExtraConfig(1, 0.25f, 2))));
+
+            base.add(() -> TreeConfiguredFeatures.WILLOWSHADE
+                    .decorated(Features.Placements.HEIGHTMAP)
+                    .decorated(Placement.COUNT_EXTRA.configured(
+                            new AtSurfaceWithExtraConfig(1, 0.25f, 2))));
         }
     }
 

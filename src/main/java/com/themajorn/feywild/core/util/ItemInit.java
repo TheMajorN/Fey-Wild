@@ -4,6 +4,8 @@ import com.themajorn.feywild.FeyWild;
 import com.themajorn.feywild.common.blocks.BlockItemBase;
 import com.themajorn.feywild.common.items.Antitoxin;
 import com.themajorn.feywild.common.items.MuroosaBalm;
+import com.themajorn.feywild.common.items.WillowshadeOil;
+import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.world.biome.Biome;
@@ -15,7 +17,16 @@ public class ItemInit {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FeyWild.MOD_ID);
 
-    // === SALVES / BALMS / POTIONS === //
+    // === FOOD === //
+    public static final RegistryObject<Item> WILLOWSHADE_FRUIT = ITEMS.register("willowshade_fruit",
+            () -> new Item(new Item.Properties().tab(ItemGroup.TAB_FOOD)
+                    .food(new Food.Builder().nutrition(1).saturationMod(1.0F).build())));
+
+    public static final RegistryObject<Item> FIRE_PEAS = ITEMS.register("fire_peas",
+            () -> new Item(new Item.Properties().tab(ItemGroup.TAB_FOOD)
+                    .food(new Food.Builder().nutrition(0).saturationMod(0.5F).build())));
+
+    // === SALVES / BALMS / TINCTURES === //
     public static final RegistryObject<Item> VIAL = ITEMS.register("vial",
             () -> new Item(new Item.Properties().tab(ItemGroup.TAB_BREWING)));
 
@@ -26,6 +37,16 @@ public class ItemInit {
             () -> new Antitoxin(new Item.Properties().tab(ItemGroup.TAB_BREWING)));
 
     public static final RegistryObject<Item> MINOR_HEALING_POTION = ITEMS.register("minor_healing_potion",
+            () -> new Item(new Item.Properties().tab(ItemGroup.TAB_BREWING)));
+
+    public static final RegistryObject<Item> WILLOWSHADE_OIL = ITEMS.register("willowshade_oil",
+            () -> new WillowshadeOil(new Item.Properties().tab(ItemGroup.TAB_BREWING)));
+
+    // === INGREDIENTS === //
+    public static final RegistryObject<Item> QUIPPER_SCALE = ITEMS.register("quipper_scale",
+            () -> new Item(new Item.Properties().tab(ItemGroup.TAB_BREWING)));
+
+    public static final RegistryObject<Item> MUROOSA_TWIG = ITEMS.register("muroosa_twig",
             () -> new Item(new Item.Properties().tab(ItemGroup.TAB_BREWING)));
 
     // === GEMS === //
@@ -62,5 +83,11 @@ public class ItemInit {
 
     public static final RegistryObject<Item> SPRUCE_BOOKSHELF_3_ITEM = ITEMS.register("spruce_bookshelf_3",
             () -> new BlockItemBase(BlockInit.SPRUCE_BOOKSHELF_3.get()));
+
+    public static final RegistryObject<Item> RED_AMANITA_ITEM = ITEMS.register("red_amanita_mushroom",
+            () -> new BlockItemBase(BlockInit.RED_AMANITA_MUSHROOM.get()));
+
+    public static final RegistryObject<Item> FLAME_LILLY_ITEM = ITEMS.register("flame_lilly",
+            () -> new BlockItemBase(BlockInit.FLAME_LILLY.get()));
 
 }

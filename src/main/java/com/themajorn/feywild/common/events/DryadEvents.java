@@ -1,10 +1,12 @@
-package com.themajorn.feywild.client.events;
+package com.themajorn.feywild.common.events;
 
 import com.themajorn.feywild.FeyWild;
 import com.themajorn.feywild.common.entities.DryadEntity;
 import com.themajorn.feywild.core.util.EntityInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.renderer.entity.model.IronGolemModel;
+import net.minecraft.client.renderer.entity.model.PhantomModel;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -17,7 +19,6 @@ import java.util.List;
 
 @Mod.EventBusSubscriber(modid = FeyWild.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class DryadEvents {
-
     @SubscribeEvent
     public void dryadAnger(BlockEvent.BreakEvent event) {
         Block block = event.getState().getBlock();
@@ -33,7 +34,6 @@ public class DryadEvents {
         if (block.is(Blocks.OAK_LOG) || block.is(Blocks.SPRUCE_LOG) || block.is(Blocks.JUNGLE_LOG) && entities.size() > 0) {
             FeyWild.LOGGER.info("You've angered a dryad!");
         }
-
     }
 
 

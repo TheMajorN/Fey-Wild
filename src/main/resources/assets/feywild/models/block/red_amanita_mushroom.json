@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "feywild:blocks/red_amanita_mushroom"
+  }
+}

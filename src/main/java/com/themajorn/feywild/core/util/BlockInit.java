@@ -3,10 +3,12 @@ package com.themajorn.feywild.core.util;
 import com.themajorn.feywild.FeyWild;
 import com.themajorn.feywild.common.blocks.BookStackBlock;
 import com.themajorn.feywild.common.blocks.BookStackShortBlock;
+import com.themajorn.feywild.common.blocks.TapBlock;
 import com.themajorn.feywild.common.blocks.candle.CandleBlock;
 import com.themajorn.feywild.common.blocks.ElderTreeLeavesBlock;
 import com.themajorn.feywild.common.trees.ElderTree;
 import com.themajorn.feywild.common.trees.RowanTree;
+import com.themajorn.feywild.common.trees.WillowshadeTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.RegistryObject;
@@ -17,7 +19,9 @@ public class BlockInit {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, FeyWild.MOD_ID);
 
-
+    // === UTILITY === //
+    public static final RegistryObject<Block> TAP = BLOCKS.register("tap",
+            () -> new TapBlock(AbstractBlock.Properties.of(Material.WOOD)));
 
 
     // === CLUTTER === //
@@ -54,6 +58,7 @@ public class BlockInit {
 
 
     // === TREES === //
+// ELDER
     public static final RegistryObject<Block> ELDER_LOG = BLOCKS.register("elder_log",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_LOG)));
 
@@ -74,7 +79,7 @@ public class BlockInit {
 
     public static final RegistryObject<Block> ELDER_SAPLING = BLOCKS.register("elder_sapling",
             () -> new SaplingBlock(new ElderTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-
+// ROWAN
     public static final RegistryObject<Block> ROWAN_LOG = BLOCKS.register("rowan_log",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_LOG)));
 
@@ -96,6 +101,28 @@ public class BlockInit {
 
     public static final RegistryObject<Block> ROWAN_SAPLING = BLOCKS.register("rowan_sapling",
             () -> new SaplingBlock(new RowanTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
+// WILLOWSHADE
+    public static final RegistryObject<Block> WILLOWSHADE_LOG = BLOCKS.register("willowshade_log",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> WILLOWSHADE_WOOD = BLOCKS.register("willowshade_wood",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_WOOD)));
+
+    public static final RegistryObject<Block> STRIPPED_WILLOWSHADE_LOG = BLOCKS.register("stripped_willowshade_log",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+
+    public static final RegistryObject<Block> STRIPPED_WILLOWSHADE_WOOD = BLOCKS.register("stripped_willowshade_wood",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> WILLOWSHADE_PLANKS = BLOCKS.register("willowshade_planks",
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> WILLOWSHADE_LEAVES = BLOCKS.register("willowshade_leaves",
+            () -> new LeavesBlock(AbstractBlock.Properties.of(Material.LEAVES).strength(0.2f)
+                    .randomTicks().sound(SoundType.GRASS).noOcclusion()));
+
+    public static final RegistryObject<Block> WILLOWSHADE_SAPLING = BLOCKS.register("willowshade_sapling",
+            () -> new SaplingBlock(new WillowshadeTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
 
 
 }

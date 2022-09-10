@@ -3,8 +3,8 @@ package com.themajorn.feywild.client.entity.renderers;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.themajorn.feywild.FeyWild;
-import com.themajorn.feywild.client.entity.models.PiranhaModel;
-import com.themajorn.feywild.common.entities.PiranhaEntity;
+import com.themajorn.feywild.client.entity.models.QuipperModel;
+import com.themajorn.feywild.common.entities.quipper.QuipperEntity;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
@@ -13,20 +13,20 @@ import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 
 import javax.annotation.Nullable;
 
-public class PiranhaRenderer extends GeoEntityRenderer<PiranhaEntity> {
+public class QuipperRenderer extends GeoEntityRenderer<QuipperEntity> {
 
-    public PiranhaRenderer(EntityRendererManager renderManager) {
-        super(renderManager, new PiranhaModel());
+    public QuipperRenderer(EntityRendererManager renderManager) {
+        super(renderManager, new QuipperModel());
         this.shadowRadius = 0.3F;
     }
 
     @Override
-    public ResourceLocation getTextureLocation(PiranhaEntity instance) {
-        return new ResourceLocation(FeyWild.MOD_ID, "textures/entities/piranha.png");
+    public ResourceLocation getTextureLocation(QuipperEntity instance) {
+        return new ResourceLocation(FeyWild.MOD_ID, "textures/entities/quipper.png");
     }
 
     @Override
-    public RenderType getRenderType(PiranhaEntity animatable, float partialTicks, MatrixStack stack, @Nullable IRenderTypeBuffer renderTypeBuffer, @Nullable IVertexBuilder vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
+    public RenderType getRenderType(QuipperEntity animatable, float partialTicks, MatrixStack stack, @Nullable IRenderTypeBuffer renderTypeBuffer, @Nullable IVertexBuilder vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
         stack.scale(0.8F, 0.8F, 0.8F);
         return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
     }

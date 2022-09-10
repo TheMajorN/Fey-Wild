@@ -4,10 +4,8 @@ import com.themajorn.feywild.FeyWild;
 import com.themajorn.feywild.common.entities.AlmirajEntity;
 import com.themajorn.feywild.common.entities.BlinkDogEntity;
 import com.themajorn.feywild.common.entities.DryadEntity;
-import com.themajorn.feywild.common.entities.PiranhaEntity;
+import com.themajorn.feywild.common.entities.quipper.QuipperEntity;
 import com.themajorn.feywild.common.entities.brigganock.BrigganockEntity;
-import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
@@ -38,10 +36,10 @@ public class EntityInit {
                     .sized(1.0F, 2.1F)
                     .build(new ResourceLocation(FeyWild.MOD_ID, "dryad").toString()));
 
-    public static final RegistryObject<EntityType<PiranhaEntity>> PIRANHA = ENTITIES.register("piranha",
-            () -> EntityType.Builder.of(PiranhaEntity::new, EntityClassification.MONSTER)
+    public static final RegistryObject<EntityType<QuipperEntity>> QUIPPER = ENTITIES.register("quipper",
+            () -> EntityType.Builder.of(QuipperEntity::new, EntityClassification.MONSTER)
                     .sized(1.2F, 1.0F)
-                    .build(new ResourceLocation(FeyWild.MOD_ID, "piranha").toString()));
+                    .build(new ResourceLocation(FeyWild.MOD_ID, "quipper").toString()));
 
 
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S",
+    "H"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:oak_planks"
+    },
+    "H": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "feywild:vial",
+    "count": 6
+  }
+}
